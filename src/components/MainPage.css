@@ -1,0 +1,288 @@
+.main-container {
+  height: 100%;
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+/* Form styling */
+
+.form-container {
+  flex: 1 1;
+  padding: 8rem 10rem;
+  /* padding-left: 0rem; */
+  overflow-y: scroll;
+  scrollbar-color: var(--color-accent) var(--input-bg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100vh; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 767px) {
+  .form-container {
+    max-width: 90%; /* Adjust the maximum width for mobile screens */
+  }
+}
+
+/* Media query for laptop screens */
+@media screen and (min-width: 768px) {
+  .form-container {
+    max-width: 100%; /* Adjust the maximum width for laptop screens */
+  }
+}
+
+.dual-mode .form-container {
+  padding-right: 5rem;
+  padding-left: 0rem;
+}
+
+.form-container h3 {
+  margin-left: 2rem;
+  margin-top: 20%;
+}
+
+.form {
+  /* border: 1px groove var(--input-bg); */
+  border-radius: 10px;
+  margin-top: 1rem;
+  min-height: 90%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1100px;
+}
+
+.form::after {
+  content: "";
+  background: linear-gradient(
+    transparent,
+    var(--color-accent),
+    /* mediumslateblue, */
+    transparent
+  );
+  height: 150px;
+  width: 1px;
+  position: absolute;
+  left: -2px;
+  top: 75%;
+  opacity: 0;
+  transition: top 800ms ease,
+              opacity 800ms ease;
+}
+
+.form:hover::after {
+  top: 0;
+  opacity: 1;
+}
+
+.form-title-div {
+  display: flex;
+  justify-content: column;
+  max-width: 1100px;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .form-title-div {
+    flex-direction: row; /* Revert to row layout for mobile screens */
+    justify-content: space-between; /* Adjust spacing for mobile */
+    padding: 0 20px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+    width: 100%; /* Set width to take full width on mobile */
+  }
+}
+
+
+.next-btn-div {
+  display: flex;
+  padding: 0 12px;
+  gap: 11px;
+  padding-top: 21% ;
+}
+
+.next-btn-div button {
+  border-radius: 3px;
+  width: 6rem;
+  height: 2rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.next-btn-div svg {
+  height: 0.7rem;
+  position: relative;
+  top: 0.05rem;
+}
+
+.next-btn {
+  padding-left: 1rem;
+}
+
+.prev-btn {
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .next-btn-div {
+    padding: 12px 0; /* Adjust padding for mobile screens */
+    gap: 10px; /* Adjust gap between items */
+    justify-content: center; /* Center align items */
+    padding-top: 20%; /* Remove top padding */
+  }
+
+  .next-btn-div button {
+    width: auto; /* Adjust button width to fit content */
+    padding: 1rem 1rem; /* Adjust button padding for mobile screens */
+  }
+
+  .next-btn {
+    padding: 0; /* Remove padding for mobile screens */
+  }
+
+  .prev-btn {
+    padding: 0; /* Remove padding for mobile screens */
+  }
+}
+
+.personal-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 35%;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form input,
+.form textarea {
+  background-color: var(--input-bg);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  padding: 12px;
+  outline: none;
+}
+
+.form input[type="text"],
+.form input[type="email"] {
+  height: 3rem;
+  appearance: none;
+  border: none;
+  border-radius: 5px;
+}
+
+label > span > span {
+  font-weight: 200;
+  font-size: 0.8rem;
+}
+
+.summary-label {
+  flex: 1 1 auto;
+  margin-top: 1.5rem;
+}
+
+.summary-label textarea {
+  height: 85%;
+  appearance: none;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Resume viewer */
+.resume-container {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 5rem 5rem 5rem 0;
+  overflow: auto;
+  min-height: 1.5vh;
+}
+
+
+.download-btn {
+  width: 7rem;
+  height: 2rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  color: var(--color-bg);
+}
+
+.resume-nav-div, .resume-top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  left: -0.20rem;
+  width: 58%;
+}
+
+.resume-nav-btn {
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  gap: 0.2rem;
+}
+
+#resume-viewer {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center center;
+    object-fit: contain;
+    image-rendering: auto;
+}
+
+.resume-top-nav .resume-nav-btn {
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  gap: 0.2rem;
+  width: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .download-btn {
+    width: 100%; /* Adjust width to full width for mobile screens */
+    margin-top: 1rem; /* Add margin for better spacing */
+  }
+
+  .resume-nav-div {
+    width: 100%; /* Adjust width to full width for mobile screens */
+    justify-content: center; /* Center align items for mobile screens */
+    left: 0; /* Reset left position */
+  }
+
+  .resume-nav-btn,
+  .resume-top-nav .resume-nav-btn {
+    width: calc(50% - 0.5rem); /* Adjust width for mobile screens */
+    margin: 0.25rem; /* Add margin between buttons */
+  }
+
+  .resume-top-nav .resume-nav-btn {
+    width: calc(33.33% - 0.5rem); /* Adjust width for top navigation buttons on mobile */
+  }
+}

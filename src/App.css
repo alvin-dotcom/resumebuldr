@@ -1,0 +1,66 @@
+@import url(./assets/inter-v12-latin-font/inter-v12.css);
+
+:root {
+  --color-bg: #1F1F1F;
+  --color-text: whitesmoke;
+  --input-bg: rgb(46, 46, 46);
+  /* --color-accent: mediumslateblue; */
+  --color-accent: #ce4257;
+  --color-link-live: #0a52cf;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter';
+  font-weight: 500;
+}
+
+.App {
+  height: 100vh;
+}
+
+h1 {
+  font-size: 9rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+button {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+}
+
+*::-webkit-scrollbar {
+  width: 1px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--input-bg);
+  border-radius: 20px;
+}
