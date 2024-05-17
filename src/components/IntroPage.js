@@ -1,7 +1,11 @@
 import './IntroPage.css';
+import './Counter.css';
+import Counter from './Counter';
 
 function IntroPage({ isFirstVisit, getStartedFn }) {
   return (
+  <>
+  <Counter />
     <div className="intro-container">
       <h1 className="intro-head">
         <span className="head-text">
@@ -14,6 +18,7 @@ function IntroPage({ isFirstVisit, getStartedFn }) {
         <button type="button" onClick={getStartedFn} className="get-started-btn">CREATE RESUME</button>
       </div>
     </div>
+    </>
   );
 }
 
