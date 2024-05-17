@@ -1,0 +1,9 @@
+.counter {
+    text-align: center;
+    font-size: 0.875rem; /* equivalent to Tailwind's text-sm */
+    color: #ffffff; /* equivalent to Tailwind's text-sky-400 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust the value as needed */
+}
